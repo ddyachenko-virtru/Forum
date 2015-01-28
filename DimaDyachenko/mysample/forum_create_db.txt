@@ -1,0 +1,27 @@
+create table Users(
+U_ID int,
+U_NAME varchar (255) NOT NULL,
+U_PWD varchar (255),
+primary key (U_ID)
+);
+
+CREATE UNIQUE INDEX U_NAME
+ON Users (U_NAME);
+
+create table Topics(
+T_ID int,
+U_ID int,
+T_NAME varchar (255) NOT NULL,
+primary key (T_ID),
+foreign key (U_ID) REFERENCES Users(U_ID),
+);
+
+create table Comments(
+C_ID int,
+T_ID int,
+U_ID int,
+C_TEXT varchar (255) NOT NULL,
+primary key (C_ID),
+foreign key (T_ID) REFERENCES Topics(T_ID),
+foreign key (U_ID) REFERENCES Users(U_ID),
+);
