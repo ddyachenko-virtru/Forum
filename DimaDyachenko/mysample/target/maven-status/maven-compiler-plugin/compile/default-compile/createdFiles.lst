@@ -1,10 +1,7 @@
 sample\jsp\services\ForumService.class
-selenium\Login.class
-selenium\HomePage.class
 sample\jsp\User.class
 sample\jsp\Comment.class
 sample\jsp\WebForum.class
 sample\jsp\ForumController.class
-selenium\Driver.class
 sample\jsp\Topic.class
 sample\jsp\DBInit.class
